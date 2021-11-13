@@ -9,7 +9,7 @@ const MyOrder = () => {
   const [control, setControl] = useState(false);
   const { email } = user;
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrder/${email}`)
+    fetch(`https://fathomless-falls-21661.herokuapp.com/myOrder/${email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [email, control]);
@@ -17,7 +17,7 @@ const MyOrder = () => {
   const handleDelete = (id) => {
     const confirmation = window.confirm("You Wanna Delete? Are you sure to confirm!");
     if (confirmation) {
-      fetch(`http://localhost:5000/deleteOrder/${id}`, {
+      fetch(`https://fathomless-falls-21661.herokuapp.com/deleteOrder/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

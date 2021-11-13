@@ -89,7 +89,7 @@ const useFirebase = () => {
 
     //Add User Info
     const hanldeUserInfoRegister = (email) => {
-        fetch("http://localhost:5000/addUserInfo", {
+        fetch("https://fathomless-falls-21661.herokuapp.com/addUserInfo", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ email }),

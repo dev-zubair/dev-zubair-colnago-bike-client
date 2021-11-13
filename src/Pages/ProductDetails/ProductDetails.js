@@ -43,7 +43,7 @@ const ProductDetails = () => {
     delete selected._id;
     selected.status = "Pending";
     // console.log('button working');
-    fetch(`http://localhost:5000/addOrder`, {
+    fetch(`https://fathomless-falls-21661.herokuapp.com/addOrder`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(selected),
