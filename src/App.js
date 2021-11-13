@@ -10,7 +10,8 @@ import AuthProvider from './Context/AuthProvider.js';
 import Home from './Pages/Home/Home.js';
 import Products from './Pages/Home/Products/Products.js';
 import Dashboard from './Pages/Dashboard/Dashboard.js';
-// import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute.js';
+import ProductDetails from './Pages/ProductDetails/ProductDetails.js';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute.js';
 
 
 function App() {
@@ -27,15 +28,15 @@ function App() {
         
             <Route path="/home">
             <Home />
-          </Route>
-        
-            {/* <PrivateRoute path="/products">
-            <Products />
-            </PrivateRoute> */}
+            </Route>
             
             <Route path="/products">
             <Products />
             </Route>
+            
+            <PrivateRoute path="/products/:id">
+             <ProductDetails />
+            </PrivateRoute>
             
             <Route path="/dashboard">
             <Dashboard />

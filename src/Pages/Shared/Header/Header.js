@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import useFirebase from '../../../Hooks/useFirebase.js';
+// import useFirebase from '../../../Hooks/useFirebase.js';
 import headerLogo from './../../../Assets/newlogo.png';
 // import headerLogo from './../../../Assets/logo.png';
 import useAuth from "./../../../Hooks/useAuth.js";
@@ -33,13 +33,13 @@ const Header = () => {
                   Contact Us
                 </Nav.Link>
 
-                <Nav.Link
+                {/* <Nav.Link
                       className="text-white fw-bolder fs-5"
                       as={NavLink}
                       to="/dashboard"
                     >
                       Dashboard
-                    </Nav.Link>
+                    </Nav.Link> */}
 
                 {!user.email ? (
                   <>

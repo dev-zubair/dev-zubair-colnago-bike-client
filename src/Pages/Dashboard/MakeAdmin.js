@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const MakeAdmin = () => {
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit} = useForm();
 
   const onSubmit = (data) => {
     fetch("https://fathomless-falls-21661.herokuapp.com/makeAdmin", {
@@ -15,7 +15,7 @@ const MakeAdmin = () => {
     console.log(data);
   };
     return (
-        <div>
+        <div className="mt-5">
       <h1>Make A Admin</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input

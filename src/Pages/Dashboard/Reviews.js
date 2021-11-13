@@ -4,7 +4,7 @@ import useFirebase from '../../Hooks/useFirebase.js';
 
 
 const Reviews = () => {
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit,  } = useForm();
   const { user } = useFirebase();
   const onSubmit = (data) => {
     fetch("https://fathomless-falls-21661.herokuapp.com/addReview", {
@@ -18,7 +18,7 @@ const Reviews = () => {
     console.log(data);
   };
     return (
-        <div>
+        <div className="mt-5">
       <h1>Add Your Review</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
